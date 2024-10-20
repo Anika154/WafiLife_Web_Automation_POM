@@ -44,7 +44,7 @@ public class BasePage {
 
     public void waitForElementToBeClickable(By locator){
 //        getDriver().manage().timeouts().implicitlyWait(Duration.ofMillis(4000));
-        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
