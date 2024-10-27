@@ -69,6 +69,26 @@ public class BasePage {
 
     }
 
+    public void scrollPageDown(){
+//        Actions action = new Actions((getDriver()));
+//       action.sendKeys(Keys.PAGE_UP).build().perform();
+//        action.keyDown(Keys.PAGE_DOWN).build().perform();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("window.scrollBy(0,8500)", "");
+    }
+
+    public void pageNavigate(String direction){
+        if (direction=="back"){
+            getDriver().navigate().back();
+        } else if (direction=="forward") {
+            getDriver().navigate().forward();
+        }else if (direction=="refresh") {
+            getDriver().navigate().refresh();
+        }else {
+            getDriver().navigate().refresh();
+        }
+    }
+
     public void addScreenShot(String name){
         Allure.addAttachment(name, new ByteArrayInputStream(((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
