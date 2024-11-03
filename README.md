@@ -10,5 +10,4 @@ Web Automation project on WalfiLife. This project showcases automation by using 
 - Provide all Information of Billing and Shipping
 - Complete Log out
 
-### Project Structures:
-This project is organized into the following main components:
+
